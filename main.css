@@ -1,0 +1,108 @@
+:root {
+  /*PRIMARY COLORS PALLET */
+  --clr-primary-100: hsl(185, 75%, 39%);
+  --clr-primary-400: hsl(229, 23%, 23%);
+  --clr-primary-300: hsl(227, 10%, 46%);
+  --clr-primary-200: hsl(0, 0%, 59%);
+  --clr-primary-50: hsl(0, 0%, 100%);
+
+  /*FONTS AND WEIGHTS*/
+
+  --fn-fam: "Kumbh Sans", sans-serif;
+  --fn-wght-400: 400;
+  --fn-wght-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  background-color: var(--clr-primary-100);
+  font-family: var(--fn-fam);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+.card__wrapper {
+  background-color: var(--clr-primary-50);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 85%;
+  max-width: 350px;
+  position: relative;
+}
+body::before {
+  content: url("./images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -40%;
+  left: -22%;
+  display: block;
+}
+body::after {
+  content: url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -55%;
+  right: -18%;
+  display: block;
+  z-index: -1;
+}
+.card__body {
+  text-align: center;
+  transform: translatey(-25%);
+  border-bottom: 1px solid var(--clr-primary-200);
+}
+.card--userPicture {
+  outline: 5px solid var(--clr-primary-50);
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  width: 6rem;
+}
+
+.user--name {
+  color: var(--clr-primary-400);
+  font-size: 1.2rem;
+  font-weight: var(--fn-wght-700);
+  margin-bottom: 0.5rem;
+}
+.user--age {
+  font-weight: var(--fn-wght-400);
+  color: var(--clr-primary-300);
+  margin-left: 0.2rem;
+}
+.origin {
+  display: block;
+  font-size: 0.89rem;
+  margin-bottom: 1.4rem;
+  color: var(--clr-primary-300);
+}
+.card__footer ul {
+  transform: translatey(-1.25rem);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.card__footer li p {
+  font-size: 1.15rem;
+  font-weight: var(--fn-wght-700);
+  font-family: var(--fn-fam);
+  color: var(--clr-primary-400);
+  margin-bottom: 0.25rem;
+}
+.addInfo {
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: var(--clr-primary-200);
+  margin-bottom: 0.25rem;
+}
